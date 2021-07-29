@@ -85,9 +85,9 @@ a{
   }
 
   /* SUMMARY */
-  .summary{
-
-  }
+  /* .summary{
+    align
+  } */
 
   .summary__title{
     font-size: 38px;
@@ -236,10 +236,69 @@ header .sub-menu li a:hover{
     line-height: 1.5;
     text-align: center;
 }
-#sign-form [type₩="submit"]{
+#sign-form [type="submit"]{
     width: 100%;
     height: 62px;
     padding: 0 25px;
     font-size: 20px;
     justify-content: center;
+}
+.section--feature{
+  background: #f5f5f5;
+  padding-top: 66px;
+}
+.section--feature .summary{
+  margin: 0 auto;
+  max-width: 820px;
+  text-align: center;
+}
+.section--feature .video{
+  max-width: 650px;
+  margin: 50px auto;
+}
+.section--feature .video .video-ratio{
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+.section--feature .video .video-ratio iframe{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.section--feature .tiles{
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.section--feature .tiles .inner{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section--feature .tiles li{
+  padding: 34px 24px;
+  text-align: center;
+  line-height: 1.5;
+  border-right: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+}
+.section--feature .tiles li:last-child{
+  border-right: none;
+}
+.section--feature .tiles li img{
+  max-width: 100%;
+  padding: 14px 10% 24px;
+  box-sizing: border-box;
+}
+.section--feature .tiles li h3{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.section--feature .tiles li p{
+  font-size: 14px;
+  color: #767676;
 }
