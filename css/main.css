@@ -44,97 +44,92 @@ a{
 
 /* BTN */
 .btn{
-    background:#eee linear-gradient(to bottom, #fcfcfc, #eee);
-    height:34px;
-    border:1px solid #d5d5d5;
-    border-radius:4px;
-    display:inline-flex;
-    align-items:center;
-    padding:0 12px;
-    font-size:14px;
-    font-weight:500;
-    line-height:1.5;
-    cursor : pointer;
-    box-sizing:border-box;
-    position:relative;
-    color:#333;
-  }
-  .btn:hover::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.07);
-  }
-  .btn.btn--primary{
-    border:1px solid #65b836;
-    color:#fff;
-    background:#55a532 linear-gradient(#91dd70, #55ae2e);
-  }
+  background:#eee linear-gradient(to bottom, #fcfcfc, #eee);
+  height:34px;
+  border:1px solid #d5d5d5;
+  border-radius:4px;
+  display:flex;
+  align-items:center;
+  padding:0 12px;
+  font-size:14px;
+  font-weight:500;
+  line-height:1.5;
+  cursor : pointer;
+  box-sizing:border-box;
+  position:relative;
+  color:#333;
+}
+.btn:hover::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.07);
+}
+.btn.btn--primary{
+  border:1px solid #65b836;
+  color:#fff;
+  background:#55a532 linear-gradient(#91dd70, #55ae2e);
+}
 /* SECTION & INNER */
-  .section{
-    position: relative;
-  }
-  .section .inner{
-    max-width: 980px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    position: relative;
-  }
-
-  /* SUMMARY */
-  /* .summary{
-    align
-  } */
-
-  .summary__title{
-    font-size: 38px;
-    font-weight: 300;
-    line-height: 1.25;
-    margin-bottom: 18px;
-  }
-
-  .summary__description{
-    font-size: 26px;
-    font-weight: 300;
-    color: #767676;
-    line-height: 1.5;
-  }
-
-  /* HEADER */
-  header{
-    border-bottom: 1px solid rgba(0,0,0,.75);
-    box-shadow: 0 0 5px rgba(0,0,0,.75);
-    background: #fff;
-  }
-  header .inner{
-      /* 마진 0 auto는 width값이 반드시 정해져있어야 */
-      height: 78px;
-  }
-  header .menu-group{
-      display: flex;
-      align-items: center;
-      height: 100%;
-  }
-  header .logo{
-    margin-right: 10px;
-  }
-  header .logo a{
-      width: 32px;
-      height: 32px;
-      display: block;
-      background: url("../img/logo.svg");
-      text-indent: -9999px;
-  }
-  header .logo a:hover{
-      background: url("../img/logo_on.svg");
-  }
-
-  header .main-menu{
+.section{
+  position: relative;
+}
+.section .inner{
+  max-width: 980px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+/* SUMMARY */
+/* .summary{
+  align
+} */
+.summary__title{
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+.summary__description{
+  font-size: 26px;
+  font-weight: 300;
+  color: #767676;
+  line-height: 1.5;
+}
+/* HEADER */
+header{
+  border-bottom: 1px solid rgba(0,0,0,.75);
+  box-shadow: 0 0 5px rgba(0,0,0,.75);
+  background: #fff;
+}
+header .inner{
+    /* 마진 0 auto는 width값이 반드시 정해져있어야 */
+    height: 78px;
+}
+header .menu-group{
     display: flex;
-  }
+    align-items: center;
+    height: 100%;
+}
+header .logo{
+  margin-right: 10px;
+}
+header .logo a{
+    width: 32px;
+    height: 32px;
+    display: block;
+    background: url("../img/logo.svg");
+    text-indent: -9999px;
+}
+header .logo a:hover{
+    background: url("../img/logo_on.svg");
+}
+header .main-menu{
+  display: flex;
+}
 header .main-menu li a{
   display: block;  
   padding: 10px;
@@ -179,7 +174,17 @@ header .sub-menu li a{
 header .sub-menu li a:hover{
     color: #4078c4;
 }
-
+#toggle-btn{
+  display: none;
+  background: url("../img/toggle-btn.svg");
+  width: 18px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 20px; 
+  cursor: pointer;
+  text-indent: -9999px;
+}
   /* VISUAL */
 .section--visual{
     background-image: url("../img/bg.jpg");
@@ -382,4 +387,126 @@ footer .logo{
 }
 footer .logo:hover svg{
   fill: #4078c0;
+}
+/* MEDIA */
+@media (max-width:1024px){
+  header.section .inner{
+    max-width: none;
+    height: auto;
+    padding: 0 20px;
+  }
+  header .menu-group,
+  header .sign-group{
+    float: none;
+  }
+  header .menu-group{
+    display: block;
+  }
+  header .logo{
+    padding: 12px 0;
+  }
+  header .main-menu{
+    display: block;
+  }
+  header .main-menu li{
+    border-top: 1px solid #e5e5e5;
+  }
+  header .main-menu li a{
+    padding: 16px 0;
+  }
+  header .sign-group{
+    display: block;
+    padding: 10px 0 20px;
+  }
+  header .btn-group{
+    display: block;
+  }
+  header .btn-group .btn{
+    justify-content: center;
+  }
+  header .btn-group .sign-in{
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  #search-form{
+    margin-top: 12px;
+    margin-right: 0;
+  }
+  #search{
+    width: 100%;
+    height: 42px;
+    text-align: center;
+  }
+  header .sub-menu{
+    margin-top: 12px;
+    margin-right: 0;
+    justify-content: center;
+  }
+  header .toggle{
+    display: none;
+  }
+  header .toggle.on{
+    display: block;
+  }
+  #toggle-btn{
+    display: block;
+  }
+
+  /* VISUAL */
+  .section--visual{
+    background: url("../img/bg-small.jpg");
+  }
+  .section--visual .inner{
+    display: block;
+    max-width: none;
+    padding: 80px 20px;
+  }
+  .section--visual .summary{
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  #sign-form{
+    width: auto;
+    max-width: 500px;
+    margin:0 auto;
+  }
+
+  /* FEATURE */
+  .section--feature .summary{
+    padding: 66px 20px 0 20px;
+
+  }
+  .section--feature .tiles li{
+    width: 50%;
+  }
+  .section--feature .tiles li:nth-child(2){
+    border-right: none;
+  }
+  .section--feature .tiles li img{
+    padding: 14px 30% 24px;
+  }
+
+  /* WHERE IS */
+  .section--where-is .inner{
+    max-width: none;
+    padding: 80px 20px 0 20px;
+  }
+
+  /* PRICING CARD */
+  .section--pricing .inner{
+    max-width: none;
+    padding: 80px 20px;
+  }
+  .section--pricing .card .cell2{
+    font-size: 20px;
+  }
+  /* FOOTER */
+
+  footer .inner{
+    padding: 80px 20px;
+  }
+  footer .logo{
+    display: none;
+  }
 }
